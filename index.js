@@ -1,8 +1,6 @@
-const fs = require("fs");
-const os = require("os");
+import * as sum from "./sum.js";
+import random from "random";
 
-const writeFile = () => {
-  console.log(os.cpus());
-};
+sum.sum();
 
-writeFile();
+console.log(random.integer(1, 10));
