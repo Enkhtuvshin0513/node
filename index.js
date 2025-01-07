@@ -1,3 +1,8 @@
-const game = require("./haichChuluu");
+const fs = require("fs");
+const os = require("os");
 
-console.log(game);
+const writeFile = () => {
+  console.log(os.cpus());
+};
+
+writeFile();
