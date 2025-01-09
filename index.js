@@ -1,6 +1,10 @@
-import * as sum from "./sum.js";
-import random from "random";
+import http from "http";
 
-sum.sum();
+const server = http.createServer((req, res) => {
+  res.write("Hello world");
+  res.end();
+});
 
-console.log(random.integer(1, 10));
+server.listen(3000);
+
+console.log("server listening on 3000");
