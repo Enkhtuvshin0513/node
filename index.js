@@ -1,7 +1,23 @@
 import http from "http";
+import fs from "fs";
 
 const server = http.createServer((req, res) => {
-  res.write("Hello world");
+  if (req.url === "/news") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+
+    const news = [{ title: "Utaa" }, { title: "Tugjgrel" }];
+    res.write(JSON.stringify(news));
+    res.end();
+  }
+  if (req.url === "/currency") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+
+    const currencies = { dollar: 3000, jpy: 200 };
+    res.write(JSON.stringify(currencies));
+    res.end();
+  }
+
+  res.writeHead(404, "not found");
   res.end();
 });
 
