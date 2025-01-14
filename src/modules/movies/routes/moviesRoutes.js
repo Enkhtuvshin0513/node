@@ -1,7 +1,6 @@
 import express from "express";
-import fs from "fs";
 
-import { movieList } from "../controllers/movieList.js";
+import { movieList, movieDetail } from "../controllers/controller.js";
 
 const route = express.Router();
 
