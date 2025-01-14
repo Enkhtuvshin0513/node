@@ -1,12 +1,12 @@
 import express from "express";
 import fs from "fs";
-import { route as moovieRoutes } from "./modules/movies/routes/moviesRoutes.js";
+import { route as movieRoutes } from "./modules/movies/routes/moviesRoutes.js";
 
 const app = express();
 
 app.use(express.json());
 
-app.use("/movies", moovieRoutes);
+app.use("/movies", movieRoutes);
 
 app.get("/", (req, res) => {
   //html info page
