@@ -23,8 +23,6 @@ app.get("/movies", (req, res) => {
 
   const { movieTitile } = req.query;
 
-  mov;
-
   res.send({ success: true, data: movies });
 });
 
